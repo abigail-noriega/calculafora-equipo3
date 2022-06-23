@@ -1,0 +1,104 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<meta http-equiv="X-UA-Compatible" content="ie=edge">
+	<title>Javascript Calculator</title>
+</head>
+
+<body>
+	<style>
+		body {
+			text-align: center;
+			background: palevioletred;
+			/* fallback for old browsers */
+			background: -webkit-linear-gradient(to right, #185a9d, #43cea2);
+			/* Chrome 10-25, Safari 5.1-6 */
+			background: linear-gradient(to right, #185a9d, #43cea2);
+			/* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+		}
+
+		form {
+			background: #f2709c;
+			/* fallback for old browsers */
+			background: -webkit-linear-gradient(to right, #ff9472, #f2709c);
+			/* Chrome 10-25, Safari 5.1-6 */
+			background: linear-gradient(to right, #ff9472, #f2709c);
+			/* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+			padding: 10px 20px;
+			width: 250px;
+			height: 350px;
+			margin: 50px auto;
+			box-shadow: #185a9d 1px 1px 6px 2px;
+		}
+
+		#display {
+			width: 100%;
+			height: 50px;
+			background-color: aquamarine;
+			margin-bottom: 20px;
+			text-align: right;
+			font-size: 25px;
+			font-weight: 300;
+		}
+
+		#keys {
+			width: 45px;
+			height: 35px;
+			margin: 5px;
+			padding: 5px;
+			border-radius: 5px;
+			outline: none;
+			cursor: pointer;
+			text-shadow: #185a9d 0px 0px 10px;
+			box-shadow: 0 0 3px 3px rgba(0, 0, 0, 0.185);
+		}
+
+		#equals {
+			text-shadow: #185a9d 1px 1px 2px;
+			height: 35px;
+			width: 85px;
+			margin: 5px;
+			padding: 5px;
+			border-radius: 5px;
+			outline: none;
+			cursor: pointer;
+			box-shadow: 0 0 3px 3px rgba(0, 0, 0, 0.185);
+		}
+	</style>
+	<h1 style="color: whitesmoke; font-size: 50px">Javascript Calculator</h1>
+	<div id="calculator">
+		<form>
+			<input type="text" id="display" disabled>
+            <br>
+            <input type="button" value="C" id="keys" onclick="toScreen('c')">
+            <input type="button" value="CE" id="keys" onclick="backspace()">
+            <input type="button" value="X^2" id="keys" onclick="power()">
+            <input type="button" value="+" id="keys" onclick="toScreen('+')">
+            <br>
+            <input type="button" value="9" id="keys" onclick="toScreen('9')">
+            <input type="button" value="8" id="keys" onclick="toScreen('8')">
+            <input type="button" value="7" id="keys" onclick="toScreen('7')">
+            <input type="button" value="-" id="keys" onclick="toScreen('-')">
+            <br>
+            <input type="button" value="6" id="keys" onclick="toScreen('6')">
+            <input type="button" value="5" id="keys" onclick="toScreen('5')">
+            <input type="button" value="4" id="keys" onclick="toScreen('4')">
+            <input type="button" value="*" id="keys" onclick="toScreen('*')">
+            <br>
+            <input type="button" value="3" id="keys" onclick="toScreen('3')">
+            <input type="button" value="2" id="keys" onclick="toScreen('2')">
+            <input type="button" value="1" id="keys" onclick="toScreen('1')">
+            <input type="button" value="/" id="keys" onclick="toScreen('/')">
+            <br>
+            <input type="button" value="0" id="keys" onclick="toScreen('0')">
+            <input type="button" value="." id="keys" onclick="toScreen('.')">
+            <input type="button" value="=" id="equals" onclick="equal()">
+        </form>
+        <p style="color: whitesmoke" >Javascript Calculator</p>
+    </div>
+    <script src="./index.js"></script>
+</body>
+</html>
